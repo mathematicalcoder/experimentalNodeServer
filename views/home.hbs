@@ -1,0 +1,34 @@
+<h1>Add student</h1>
+<form action="/submit" method="POST">
+    Name: <input type="text" name="name" id="name"> <br>
+    Grade: <input type="number" name="score" id="score"> <br>
+    <input type="submit">
+</form>
+
+<h1>Gradesheet</h1>
+<ul>
+{{#each students}}
+<li>{{this.name}} has a grade of {{this.score}}</li>
+{{/each}}
+</ul>
+
+<link rel="stylesheet" type="text/css" href="https://mathemolympiad-css.glitch.me/style.css">
+<style>
+  textarea {
+    width: 500px;
+    height: 200px;
+  }
+  @media print {
+    .noprint {display: none;}
+  }
+  input[type="text"], input[type="number"] {
+    width: 300px;
+  }
+  input[type="submit"] {
+    width: auto;
+  }
+  button:hover, input[type="submit"]:hover {
+    background-color: slategray;
+    color: white;
+  }
+</style>
